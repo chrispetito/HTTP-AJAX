@@ -13,9 +13,10 @@ class FriendForm extends React.Component {
   }
 
   handleChange = event => {
+      event.preventDefault();
     this.setState({
       person: {
-          ...this.state.person,
+        ...this.state.person,
         [event.target.name]: event.target.value
       }
     });
@@ -24,16 +25,44 @@ class FriendForm extends React.Component {
   postFriend = event => {
     event.preventDefault();
     this.props.postFriend(this.state.person);
+    this.setState({
+        person: {
+            name: '',
+            email: '',
+            age: ''
+        }
+    })
   };
 
   render() {
     return (
-      <form onSubmit={this.postFriend}>
+      <form className="friend-form" onSubmit={this.postFriend}>
         <h2>Add Friend</h2>
-        <input name="name" placeholder="NAME" onChange={this.handleChange} value={this.state.person.name}/>
-        <input name="email" placeholder="EMAIL" onChange={this.handleChange} value={this.state.person.email}/>
-        <input name="age" placeholder="AGE" onChange={this.handleChange} value={this.state.person.age}/>
-        <button>Add Friend</button>
+        <input
+        required
+          className="form-input"
+          name="name"
+          placeholder="NAME"
+          onChange={this.handleChange}
+          value={this.state.person.name}
+        />
+        <input
+        required
+          className="form-input"
+          name="email"
+          placeholder="EMAIL"
+          onChange={this.handleChange}
+          value={this.state.person.email}
+        />
+        <input
+        required
+        className="form-input"
+          name="age"
+          placeholder="AGE"
+          onChange={this.handleChange}
+          value={this.state.person.age}
+        />
+        <button className='button-input'>Add Friend</button>
       </form>
     );
   }

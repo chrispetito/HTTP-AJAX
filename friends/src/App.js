@@ -30,8 +30,15 @@ class App extends React.Component {
   postFriend = person => {
     axios
     .post('http://localhost:5000/friends', person)
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
+    .then((res) => {
+      console.log(res);
+      this.setState({
+        items: res.data
+      })
+    })
+    .catch((err) => {
+      console.log(err);
+    })
   }
 
   render() {
