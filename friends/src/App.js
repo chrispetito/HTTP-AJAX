@@ -44,8 +44,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <FriendsList list={this.state.items}/>
-        <FriendForm postFriend={this.postFriend}/>
+        <FriendsList list={this.state.items} />
+        <FriendForm postFriend={this.postFriend} deleteFriend={this.deleteFriend}/>
       </div>
     );
   }

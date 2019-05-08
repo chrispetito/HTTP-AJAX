@@ -13,7 +13,7 @@ class FriendForm extends React.Component {
   }
 
   handleChange = event => {
-      event.preventDefault();
+    event.preventDefault();
     this.setState({
       person: {
         ...this.state.person,
@@ -26,12 +26,12 @@ class FriendForm extends React.Component {
     event.preventDefault();
     this.props.postFriend(this.state.person);
     this.setState({
-        person: {
-            name: '',
-            email: '',
-            age: ''
-        }
-    })
+      person: {
+        name: "",
+        email: "",
+        age: ""
+      }
+    });
   };
 
   render() {
@@ -39,7 +39,7 @@ class FriendForm extends React.Component {
       <form className="friend-form" onSubmit={this.postFriend}>
         <h2>Add Friend</h2>
         <input
-        required
+          required
           className="form-input"
           name="name"
           placeholder="NAME"
@@ -47,7 +47,7 @@ class FriendForm extends React.Component {
           value={this.state.person.name}
         />
         <input
-        required
+          required
           className="form-input"
           name="email"
           placeholder="EMAIL"
@@ -55,14 +55,14 @@ class FriendForm extends React.Component {
           value={this.state.person.email}
         />
         <input
-        required
-        className="form-input"
+          required
+          className="form-input"
           name="age"
           placeholder="AGE"
           onChange={this.handleChange}
           value={this.state.person.age}
         />
-        <button className='button-input'>Add Friend</button>
+        <button className="button-input">Add Friend</button>
       </form>
     );
   }
