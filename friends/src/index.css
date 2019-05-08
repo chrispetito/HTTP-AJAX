@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.App {
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.friends-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.4rem;
+}
+.friend-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
