@@ -14,7 +14,8 @@ code {
 .App {
   font-size: 62.5%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 .friends-list {
@@ -33,4 +34,35 @@ code {
   width: 30%;
   margin-bottom: 1rem;
   border-radius: 10px;
+}
+.name-box {
+  border: 1px solid red;
+  height: 3rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px 10px 0 0 ;
+  background: #bb1333;
+  color: white;
+}
+.age-box {
+  border: 1px solid red;
+  height: 3rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.email-box {
+  border: 1px solid red;
+  height: 3rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
 }
