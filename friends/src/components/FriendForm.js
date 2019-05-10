@@ -34,6 +34,7 @@ class FriendForm extends React.Component {
     });
   };
 
+
   render() {
     return (
       <form className="friend-form" onSubmit={this.postFriend}>

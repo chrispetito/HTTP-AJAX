@@ -96,9 +96,14 @@ code {
 .delete-button {
   margin-bottom: 1rem;
   margin-top: 1rem;
-  width: 100%;
+  width: 50%;
   height: 1.6rem;
   border-radius: 4px;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #bb1333;
+  color: #bb1333;
+}
+.delete-button:hover {
+  background: #bb1333;
+  color: white;
+  cursor: pointer;
 }
