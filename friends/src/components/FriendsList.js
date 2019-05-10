@@ -37,14 +37,6 @@ class FriendsList extends React.Component {
               <button className="delete-button" onClick={event => this.props.deleteFriend(event, item.id)}>
                 Delete
               </button>
-              <button
-                onClick={event => {
-                  this.props.deleteItem(event, item.id);
-                }}
-                className="md-button"
-              >
-                Delete item
-              </button>
             </div>
           );
         })}
